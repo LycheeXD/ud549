@@ -10,4 +10,8 @@ function AddressBook() {
   this.getContact = function(index) {
     return this.contacts[index];
   };
+
+  this.deleteContact = function(index) {
+    delete this.contacts.splice(index, 1);
+  }
 };
