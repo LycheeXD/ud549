@@ -28,11 +28,11 @@ describe('Async Address Book', function() {
 
   beforeEach(function(done) {
     addressBook.getInitialContacts(function() {
-      done();
+      done();  // let test suite knows when async func is done running and can continue testing
     })
   })
 
-  it('should get initial contacts', function(done) {
+  it('should get initial contacts', function(done) {  // done indicates which test rely on the async execution
 
     expect(addressBook.initialComplete).toBe(true);
     done();
